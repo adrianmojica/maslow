@@ -5,13 +5,9 @@
 </template>
 
 <script>
-import Questions from './components/Questions.vue'
 
 export default {
-  name: 'HelloWorld',
-  components: {
-    Questions: Questions
-  },
+  name: 'App',
   props: {
     msg: String
   }
