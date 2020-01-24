@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <Questions/>
   </div>
 </template>
 
