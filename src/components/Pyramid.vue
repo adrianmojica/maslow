@@ -5,25 +5,50 @@ export default {
   props: {
     level1: Number,
     level2: Number,
+    level2_1: Number,
+    level2_2: Number,
+    level2_3: Number,
+    level2_4: Number,
+    level2_5: Number,
     level3: Number,
+    level3_1: Number,
+    level3_2: Number,
+    level3_3: Number,
     level4: Number,
-    level5: Number
+    level4_1: Number,
+    level4_2: Number,
+    level4_3: Number,
+    level4_4: Number,
+    level5: Number,
+    level5_1: Number,
+    level5_2: Number,
+    level5_3: Number,
+    level5_4: Number,
+    level5_5: Number
   },
   methods: {
     calcTotalLevel1 () {
       return this.level1
     },
     calcTotalLevel2 () {
-      return this.level1
+      let sum2 = this.level2 + this.level2_1 + this.level2_2 + this.level2_3 + this.level2_4 + this.level2_5
+      sum2 = sum2 / 5
+      return sum2
     },
     calcTotalLevel3 () {
-      return this.level1
+      let sum3 = this.level3 + this.level3_1 + this.level3_2 + this.level3_3
+      sum3 = sum3 / 5
+      return sum3
     },
     calcTotalLevel4 () {
-      return this.level1
+      let sum4 = this.level4 + this.level4_1 + this.level4_2 + this.level4_3 + this.level4_4
+      sum4 = sum4 / 5
+      return sum4
     },
     calcTotalLevel5 () {
-      return this.level1
+      let sum5 = this.level4 + this.level5_1 + this.level5_2 + this.level5_3 + this.level5_4 + this.level5_5
+      sum5 = sum5 / 5
+      return sum5
     }
   }
 }
@@ -37,24 +62,24 @@ export default {
                 {{ calcTotalLevel1() }}
             </div>
         </div>
-        <div :class="this.level2 > 50 ? 'level': 'level shakey'" id="pyramid-level-2">
+        <div :class="calcTotalLevel2() > 50 ? 'level': 'level shakey'" id="pyramid-level-2">
             <div class="inside-text">
-            {{ this.level2 }}
+            {{ calcTotalLevel2() }}
             </div>
         </div>
-        <div :class="this.level3 > 50 ? 'level': 'level shakey'" id="pyramid-level-3">
+        <div :class="calcTotalLevel3() > 50 ? 'level': 'level shakey'" id="pyramid-level-3">
             <div class="inside-text">
-            {{ this.level3 }}
+            {{ calcTotalLevel3() }}
             </div>
         </div>
-        <div :class="this.level4 > 50 ? 'level': 'level shakey'" id="pyramid-level-4">
+        <div :class="calcTotalLevel4() > 50 ? 'level': 'level shakey'" id="pyramid-level-4">
             <div class="inside-text">
-            {{ this.level4 }}
+            {{ calcTotalLevel4() }}
             </div>
         </div>
         <div :class="this.level5 > 50 ? 'level': 'level shakey'" id="pyramid-level-5">
             <div class="inside-text">
-            {{ this.level5 }}
+            {{ calcTotalLevel5() }}
             </div>
         </div>
     </div>
