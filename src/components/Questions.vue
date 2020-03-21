@@ -39,6 +39,11 @@ export default {
     }
   },
   props: {
+    average1: Number,
+    average2: Number,
+    average3: Number,
+    average4: Number,
+    average5: Number,
     level1: Number,
     level2: Number,
     level2_1: Number,
@@ -67,18 +72,15 @@ export default {
 
 <template>
   <div class="copy">
-    <h1>Maslow's Hierarchy of Needs</h1>
+    <h1>“A musician must make music, an artist must paint, a poet must write… to be ultimately happy. What someone can be, they must be.
+      This need we may call self-actualization.”<span class="quote-name">- Abraham Maslow</span></h1>
     <p>
-      Maslow's hierarchy of needs is a theory in psychology
-      that is formed of a five-tier model of human needs,
-      depicted as the levels of a pyramid.
-      Needs lower down in the pyramid must be satisfied before
-      individuals can attend to any of the needs in the higher up steps.
-    </p>
-    <p>
-      In the next exercise we ask you to move the slider to the sides according to
-      how well met the need is in your life. 0, the lowest value, means that currently
-      the need is not being met, while 100 means the need is met and healthy.
+      Maslow’s Hierarchy of Needs is a concept often described using a pyramid
+      to explain human motivation. This theory suggests that if we feel sturdy
+      at each different level of needs, then we’ll have a solid foundation and
+      greater chance to feel something called self-actualization- that is,
+      feeling totally okay in your skin. Using the slider,
+      how strong do you feel in each of these areas?
     </p>
 
     <div v-if="!isHidden" class="container">
@@ -147,14 +149,6 @@ export default {
     :level3=value_3 :level3_1=value_3_1 :level3_2=value_3_2 :level3_3=value_3_3 :level4=value_4 :level4_1=value_4_1 :level4_2=value_4_2 :level4_3=value_4_3
     :level4_4=value_4_4 :level5=value_5 :level5_1=value_5_1 :level5_2=value_5_2 :level5_3=value_5_3 :level5_4=value_5_4
     :level5_5=value_5_5 :level5_6=value_5_6 />
-    <div v-if="isHidden" class="diagnosis">
-      here is the results cases
-      <div><h1 class="blue" >Self Actualization</h1></div>
-      <div><h1 class="green" >Esteem</h1></div>
-      <div><h1 class="red" >Love and Belonging</h1></div>
-      <div><h1 class="purple" >Safety</h1></div>
-      <div><h1 class="yellow" >Physiological</h1></div>
-    </div>
   </div>
 </template>
 
@@ -182,6 +176,11 @@ export default {
 }
 h1 {
   text-align: center;
+  font-size:20px;
+  span{
+    color: gray;
+    font-size:17px;
+  }
 }
 .copy {
   margin: 0 auto;

@@ -24,6 +24,9 @@ body {
   text-align: center;
   color: #2c3e50;
 }
+.vue-slider {
+  height: 12px !important;
+}
 .bar {
   background: #0053ee;
   height:60px;
